@@ -7,9 +7,6 @@
 ![screen2](./public/noproject/screen_3.png)
 
 
-----
-
-
 ### Stacks 
 
 - ReactJs
