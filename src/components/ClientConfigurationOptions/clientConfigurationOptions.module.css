@@ -1,0 +1,31 @@
+.clientConfigurationOptionsTrigger {
+  @apply
+  w-[42px] 
+  h-[42px]
+  
+  flex 
+  items-center 
+  justify-center 
+}
+
+.clientConfigurationOptionsContent {
+  @apply
+  p-4 
+  uppercase 
+  font-bold 
+  text-stone-400
+  bg-stone-800 
+}
+
+.clientConfigurationOptionsContentButtonActive {
+  @apply
+  p-2 
+  hover:bg-stone-700/25 
+  hover:text-stone-100
+}
+
+.clientConfigurationOptionsContentButtonDesable {
+  @apply
+  p-2
+  text-stone-600
+}

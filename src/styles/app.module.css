@@ -1,0 +1,263 @@
+.appContainer {
+  @apply
+  h-screen 
+  
+  flex 
+  justify-center 
+  items-center 
+  
+  font-poppins
+  bg-[url(./bg-garen.jpg)] 
+}
+
+.appContent {
+  @apply
+  flex 
+  flex-col-reverse 
+  lg:flex-row 
+  container 
+  bg-white 
+  lg:h-[760px]
+}
+
+.appContent aside {
+  @apply
+  lg:w-[20%]
+  lg:m-6
+  p-2
+  
+  flex
+  flex-col
+}
+
+.appContentHeader {
+  @apply
+  mt-4 
+  mb-10
+  p-3 
+
+  flex 
+  justify-center 
+  items-center 
+}
+
+.appContentHeader img {
+  @apply
+  w-[60px]
+}
+
+.appContentHeaderTitle {
+  @apply
+  flex 
+  flex-col 
+  
+  uppercase 
+  font-poppins 
+  font-bold 
+  text-4xl 
+  text-red-600/75 
+  leading-7
+}
+
+.appContentForm {
+  @apply  
+  flex 
+  flex-col 
+  justify-between
+  flex-1
+  
+  font-poppins
+}
+
+.appContentFormGroup {
+  @apply
+  flex 
+  flex-col 
+  gap-2
+}
+
+.appContentFormTitle{
+  @apply
+  p-3
+  
+  font-semibold 
+  text-3xl 
+  text-center 
+}
+
+.appContentFormInput {
+  @apply
+  p-3 
+  
+  font-bold 
+  text-sm 
+  
+  rounded 
+  bg-gray-200/75 
+  placeholder-gray-500 
+  placeholder-opacity-75
+  focus:outline 
+  outline-2 
+  focus:outline-black
+}
+
+.appContentFormButtonGroup {
+  @apply
+  mt-4 
+  mb-1 
+  
+  flex 
+  gap-2 
+  
+  font-bold 
+  text-center
+}
+
+.appContentFormButton{
+  @apply
+  w-full
+  p-2 
+  
+  flex 
+  items-center 
+  justify-center 
+  
+  
+  hover:brightness-95 
+  border 
+  rounded-md 
+}
+
+.appContentFormCheckGroup{
+  @apply
+  mb-2
+  flex 
+  gap-2 
+}
+
+.appContentFormCheckGroup input {
+  @apply
+  accent-red-700 
+  focus:accent-red-600
+}
+
+.appContentFormButtonCheck label {
+  @apply
+  font-medium 
+  text-sm
+}
+
+.appContentFormFooter {
+  @apply
+  flex 
+  flex-col 
+  justify-center 
+  items-center 
+  
+  uppercase 
+  font-semibold 
+  text-gray-600/50
+  text-xs
+}
+
+.appContentFormFooterButtonLogin {
+  @apply
+  p-5 
+  mb-8
+  
+  rounded-2xl 
+  
+  text-2xl 
+  text-center 
+  hover:text-white 
+  bg-gray-50 
+  hover:bg-red-500 
+}
+
+.appContentFormFooterButtonRecoverPassword {
+  @apply
+  pt-6 
+  hover:text-gray-600
+}
+
+.appContentFormFooterGroup {
+  @apply
+  flex 
+  items-center 
+  justify-center 
+  w-full 
+  relative
+}
+
+.appContentFormFooterButtonCreateAnAccount {
+  @apply
+  p-1 
+  hover:text-gray-600
+}
+
+.appContentFormFooterButtonVersion {
+  @apply
+  absolute 
+  right-0 
+  lg:translate-x-1
+}
+
+.appContentBannerContainer {
+  @apply
+  relative
+  
+  flex 
+  flex-1 
+}
+
+.appContentBannerButton {
+  @apply
+  absolute
+  top-0 
+  right-0 
+  text-stone-300 
+  text-2xl 
+  p-1
+}
+
+.appContentBannerButtonInfo {
+  @apply
+  absolute 
+  top-10 
+  left-10 
+  
+  p-0 
+  mb-8 
+  
+  text-center 
+  bg-fuchsia-500 
+  hover:brightness-75 
+  rotate-45
+}
+
+.appContentBannerButtonClientConfigurationOptions {
+  @apply
+  absolute 
+  top-10 
+  right-10 
+  rounded-2xl 
+    
+  mb-8 
+  p-2
+  
+  text-3xl 
+  text-center 
+  text-gray-300 
+  bg-gray-600/50 
+  hover:text-white 
+}
+
+.appContentBannerContainer img {
+  @apply
+  w-screen 
+  h-[250px] 
+  md:h-[450px] 
+  lg:h-full
+  
+  object-cover 
+}

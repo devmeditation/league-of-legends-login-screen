@@ -1,0 +1,67 @@
+.gameInformationTrigger {
+  @apply 
+  w-[42px] 
+  h-[42px] 
+  
+  flex 
+  items-center 
+  justify-center 
+  -rotate-45
+  
+  text-3xl 
+  font-bold 
+}
+
+.gameInformationContent {
+  @apply
+  w-[50%]
+  p-4 
+  bg-white 
+}
+
+.gameInformationContentArrow {
+  @apply
+  p-2
+}
+
+.gameInformationContentTitle {
+  @apply
+  p-1
+}
+
+.gameInformationContentDate {
+  @apply
+  p-1 
+  
+  flex 
+  items-center 
+  gap-2 
+  
+  font-bold 
+  text-sm 
+  text-stone-500
+}
+
+.gameInformationContentText{
+  @apply
+  p-1 
+  
+  flex 
+  items-center 
+  gap-2 
+  
+  font-semibold 
+  text-sm 
+  text-stone-800
+}
+
+.gameInformationContentLink {
+  @apply
+  mt-16 
+  p-1 
+  
+  uppercase 
+  font-bold 
+  text-sm 
+  text-stone-500
+}
