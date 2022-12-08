@@ -7,8 +7,35 @@ import { VersionButton } from "./components/VersionButton/VersionButton";
 import { ClientConfigurationOptions } from "./components/ClientConfigurationOptions/ClientConfigurationOptions";
 
 import styles from "./styles/app.module.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isActiveName, setIsActiveName] = useState(false);
+  const [isActivePassworld, setIsActivePassworld] = useState(false);
+  const [activeLoginButton, setActiveLoginButton] = useState(false);
+  const [nameText, setNameText] = useState("");
+  const [passworldText, setPassworldText] = useState("");
+
+  useEffect(() => {
+    if (nameText.length > 0) {
+      setIsActiveName(true);
+    } else {
+      setIsActiveName(false);
+    }
+
+    if (passworldText.length > 0) {
+      setIsActivePassworld(true);
+    } else {
+      setIsActivePassworld(false);
+    }
+
+    if (nameText.length > 0 && passworldText.length > 0) {
+      setActiveLoginButton(true)
+    } else {
+      setActiveLoginButton(false)
+    }
+  }, [nameText, passworldText]);
+
   return (
     <main className={styles.appContainer}>
       <div className="lg:m-5">
@@ -26,19 +53,43 @@ function App() {
               <div className={styles.appContentFormGroup}>
                 <h1 className={styles.appContentFormTitle}>Fazer login</h1>
 
-                <input
-                  className={styles.appContentFormInput}
-                  type="text"
-                  placeholder="NOME DO USUÁRIO"
-                />
+                <label htmlFor="name">
+                  <span
+                    className={
+                      isActiveName
+                        ? styles.appContentFormGroupLabelActive
+                        : styles.appContentFormGroupLabelDisable
+                    }
+                  >
+                    NOME DO USUÁRIO
+                  </span>
+                  <input
+                    className={styles.appContentFormInput}
+                    type="text"
+                    name="name"
+                    onChange={(e) => setNameText(e.target.value)}
+                    placeholder="NOME DO USUÁRIO"
+                  />
+                </label>
 
-                <input
-                  className={styles.appContentFormInput}
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="SENHA"
-                />
+                <label htmlFor="password">
+                  <span
+                    className={
+                      isActivePassworld
+                        ? styles.appContentFormGroupLabelActive
+                        : styles.appContentFormGroupLabelDisable
+                    }
+                  >
+                    SENHA
+                  </span>
+                  <input
+                    className={styles.appContentFormInput}
+                    type="password"
+                    name="password"
+                    onChange={(e) => setPassworldText(e.target.value)}
+                    placeholder="SENHA"
+                  />
+                </label>
 
                 <section
                   id="SocialMediaLoginButtons"
@@ -76,7 +127,7 @@ function App() {
               </div>
 
               <footer className={styles.appContentFormFooter}>
-                <a className={styles.appContentFormFooterButtonLogin} href="#">
+                <a className={activeLoginButton ? styles.appContentFormFooterButtonLoginActive : styles.appContentFormFooterButtonLogin} href="#">
                   <FaArrowRight />
                 </a>
 
@@ -105,10 +156,14 @@ function App() {
 
           <div className={styles.appContentBannerContainer}>
             <div>
-              <span className={`${styles.appContentBannerButton} hover:bg-red-600/75`}>
+              <span
+                className={`${styles.appContentBannerButton} hover:bg-red-600/75`}
+              >
                 <FiX />
               </span>
-              <span className={`${styles.appContentBannerButton} right-8 hover:bg-stone-600/75`}>
+              <span
+                className={`${styles.appContentBannerButton} right-8 hover:bg-stone-600/75`}
+              >
                 <FiMinus />
               </span>
             </div>
@@ -118,15 +173,16 @@ function App() {
                 <GameInformation />
               </div>
 
-              <div className={styles.appContentBannerButtonClientConfigurationOptions}>
+              <div
+                className={
+                  styles.appContentBannerButtonClientConfigurationOptions
+                }
+              >
                 <ClientConfigurationOptions />
               </div>
             </div>
 
-            <img
-              src="/bg-garen.jpg"
-              alt=""
-            />
+            <img src="/bg-garen.jpg" alt="" />
           </div>
         </section>
       </div>

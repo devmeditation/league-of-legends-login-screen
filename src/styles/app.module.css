@@ -85,8 +85,33 @@
   text-center 
 }
 
+.appContentFormGroup label {
+  @apply
+  relative
+  transition-all
+  duration-1000
+}
+
+.appContentFormGroupLabelDisable{
+  @apply
+  hidden
+}
+.appContentFormGroupLabelActive {
+  @apply
+  absolute
+  p-1
+  
+  ml-2
+  font-medium
+  text-[0.7rem]
+  text-stone-600
+}
+
 .appContentFormInput {
   @apply
+  w-full
+
+  pt-4
   p-3 
   
   font-bold 
@@ -169,9 +194,20 @@
   
   text-2xl 
   text-center 
-  hover:text-white 
   bg-gray-50 
-  hover:bg-red-500 
+  
+}
+.appContentFormFooterButtonLoginActive {
+  @apply
+  p-5 
+  mb-8
+  
+  rounded-2xl 
+  
+  text-2xl 
+  text-center 
+  text-white 
+  bg-red-500 
 }
 
 .appContentFormFooterButtonRecoverPassword {
