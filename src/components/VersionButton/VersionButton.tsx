@@ -14,15 +14,17 @@ export function VersionButton() {
           <Dialog.Content className={styles.versionButtonContent}>
             <div>
               <h1>v60.0.10</h1>
+              
               <p>Fudation: 4082528</p>
               <p>UX: 4082528</p>
               <p>SDK: 202.323.433443.111</p>
             </div>
-            <Dialog.Close asChild>
-              <div className={styles.versionButtonClose}>
+
+            <span className={styles.versionButtonClose}>
+              <Dialog.Close asChild>
                 <button>OK</button>
-              </div>
-            </Dialog.Close>
+              </Dialog.Close>
+            </span>
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
