@@ -5,6 +5,7 @@ import { TabLangSelect } from "./TabLangSelect";
 import { TabLegaueOfLegends } from "./TabLegaueOfLegends";
 
 import styles from "./gameConfiguration.module.css";
+import { VersionButton } from "../VersionButton/VersionButton";
 
 export function GameConfiguration() {
   const [configurationOptionSelected, setConfigurationOptionSelected] =
@@ -78,11 +79,15 @@ export function GameConfiguration() {
             )}
 
             <footer className={styles.gameConfigurationFooter}>
-              <p>Termos de serviço</p>
-              <p>Terceiros</p>
-              <p>Aviso de privacidade</p>
+              <div>
+                <p>Termos de serviço</p>
+                <p>Terceiros</p>
+                <p>Aviso de privacidade</p>
+              </div>
 
-              <div>v60.0.10.84832</div>
+              <div>
+                <VersionButton />
+              </div>
             </footer>
 
             <Dialog.Close asChild>

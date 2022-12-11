@@ -88,8 +88,6 @@
 .appContentFormGroup label {
   @apply
   relative
-  transition-all
-  duration-1000
 }
 
 .appContentFormGroupLabelDisable{

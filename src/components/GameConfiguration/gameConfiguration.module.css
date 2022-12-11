@@ -90,11 +90,17 @@
 
 .gameConfigurationFooter {
   @apply
-  absolute
-  bottom-10
-  left-2
+  relative
+  lg:absolute
+  lg:bottom-10
+  lg:left-2
 
   p-2
+  flex
+  lg:flex-col
+  justify-between
+  items-end
+  lg:items-start
   
   uppercase
   font-semibold
