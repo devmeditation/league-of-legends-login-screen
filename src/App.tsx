@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebookF, FaApple, FaArrowRight } from "react-icons/fa";
+import { FaFacebookF, FaApple, FaArrowRight, FaXbox } from "react-icons/fa";
 import { FiMinus, FiX } from "react-icons/fi";
 
 import { GameInformation } from "./components/GameInformation/GameInformation";
@@ -99,21 +99,27 @@ function App() {
                     className={`${styles.appContentFormButton} bg-blue-600 `}
                     href="#"
                   >
-                    <span className="rounded-full bg-white text-blue-600 p-1">
-                      <FaFacebookF size={12} />
+                    <span className="rounded-full bg-white text-blue-600 m-[0.1rem] p-0">
+                      <FaFacebookF size={15} />
                     </span>
                   </a>
                   <a
                     className={`${styles.appContentFormButton} bg-stone-100/50`}
                     href="#"
                   >
-                    <FcGoogle size={20} />
+                    <FcGoogle size={18} />
                   </a>
                   <a
                     className={`${styles.appContentFormButton} bg-black text-white`}
                     href="#"
                   >
-                    <FaApple size={20} />
+                    <FaApple size={18} />
+                  </a>
+                  <a
+                    className={`${styles.appContentFormButton} bg-green-700 text-white`}
+                    href="#"
+                  >
+                    <FaXbox size={18} />
                   </a>
                 </section>
 
